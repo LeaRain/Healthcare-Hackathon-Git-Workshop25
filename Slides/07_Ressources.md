@@ -2,7 +2,7 @@
 
 ## Dieses Repository
 
-[Repo QR Code](../Ressources/Repo_QRCode.png)
+![Repo QR Code](../Ressources/Repo_QRCode.png)
 
 ## Zusätzliche Ressourcen
 
