@@ -1,4 +1,10 @@
-# Zusätzliche Ressourcen
+# Ressourcen
+
+## Dieses Repository
+
+<img src="./Ressources/Repo_QRCode.png" alt="Repo QR Code" width="200" align="right"/>
+
+## Zusätzliche Ressourcen
 
 - Git Cheatsheets:
     - GitHub: [https://education.github.com/git-cheat-sheet-education.pdf](https://education.github.com/git-cheat-sheet-education.pdf)
