@@ -2,7 +2,7 @@
 
 ## Dieses Repository
 
-<img src="../Ressources/Repo_QRCode.png" alt="Repo QR Code" width="200" align="right"/>
+[Repo QR Code](../Ressources/Repo_QRCode.png)
 
 ## Zusätzliche Ressourcen
 
