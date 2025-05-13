@@ -1,48 +1,67 @@
-# Übliche workflows
-## Repository von Remote(Server) lokal klonen
->git clone "URLTOREPOSITORY"
-## git initial einrichten
->git config --global user.name "Your Username"
->git config --global user.email "YourEmail@example.com"
+# Übliche Workflows
 
-testen mit:
->git config list
+## Repository von Remote(server) lokal klonen
 
-## Feature X auf eigenem Branch entwickeln und dann via pull-request auf den branch "main" mergen
-Zuerst neuesten Stand von Server holen
->git checkout main
->git fetch
-prüfen, ob alles passt (git log --graph, git status,...)
->git pull
-
-Dann Branch "feature_x" erstellen und daran arbeiten
->git branch "feature_x"
->git checkout "feature_x"
-testen mit git status
-arbeiten und committen (git add, git commit)
-
-Dann Pull Request erstellen (auf github)
-    Review von Branch (auf github)
-    wenn passt: merge auf branch "main" (auf github)
-
-## merge-konflikte
-Sobald Merge-Konflikt, wird das angezeigt.
-Heißt, dass der aktuelle stand 2 parent-commits hat (A und B)
-In allen Dateien mit Konflikt wird A und B wie folgt angezeigt:
+```bash
+git clone <repo>
 ```
-If you have questions, please
+
+## Git Initial Einrichten
+
+```bash
+git config --global user.name "<name>"
+git config --global user.email "<email>"
+```
+
+Testen der Einstellungen mit:
+```bash
+git config list
+```
+
+## Featureentwicklung auf eigenem Branch entwickeln
+
+1. Update der Informationen des Repos auf den neusten Stand:
+```bash
+git checkout main
+git fetch
+```
+2. Status des Repos überprüfen (`git log --graph`, `git status`)
+3. Repo updaten:
+```bash
+git pull
+```
+4. Dann einen neuen Branch erstellen und daran arbeiten:
+```bash
+git branch "<branch>"
+git checkout "<branch>"
+```
+5. Status des Branches überprüfen (`git log --graph`, `git status`)
+6. Arbeiten und Committen (`git add`, `git commit`, `git push`)
+7. Neuen Pull-Request erstellen (auf GitHub)
+    1. Review von Branch (auf GitHub, am besten durch Kollegen)
+    2. Wenn passt: Merge auf Branch `main` (auf GitHub)
+
+## Merge-Konflikte
+
+- Ursachen
+    - Zusammenführen von Branches mit konkurrierende Commits
+    - 2 Commits auf demselben Branch mit demselben Parent
+- Anzeige im File mithilfe von Konfliktmarkern
+```
+lorem ipsum
 <<<<<<< HEAD
-A open an issue
+Version A
 =======
-B ask your question in IRC.
->>>>>>> branch-a
+Version B
+>>>>>>> <branch>
+lorem ipsum
 ```
-wenn konflikt gelöst ist, datei mit ``git add DATEI`` adden
-dann wieder git commit
-fertig
+- Editieren der Änderungen und entfernen der Konfliktmarker
+- Neuen Stand committen
 
-## code analysieren
->git log --graph --all
-zeigt Übersicht aller commits und branches
+## Code analysieren
 
-
+Übersicht über alle Commits und Branches:
+```bash
+git log --graph --all
+```
