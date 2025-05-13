@@ -49,11 +49,11 @@ git checkout "<branch>"
 - Anzeige im File mithilfe von Konfliktmarkern
 ```
 lorem ipsum
-<<<<<<< HEAD
+<<<<<< HEAD
 Version A
 =======
 Version B
->>>>>>> <branch>
+>>>>>> <branch>
 lorem ipsum
 ```
 - Editieren der Änderungen und entfernen der Konfliktmarker
