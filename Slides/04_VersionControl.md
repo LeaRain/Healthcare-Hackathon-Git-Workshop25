@@ -37,6 +37,19 @@ Hinzufügen einer neuen Datei oder eines neuen Stands einer bestehenden Datei.
 git add <file>
 ```
 
+### Diff
+
+Differezen zwischen dem aktuellen Stand des lokalen Repos und dem eingecheckten Stand anzeigen.
+```bash
+git diff
+```
+
+Geht auf für einzelne Files:
+```bash
+git diff <file>
+```
+
+
 ### Commit
 
 Stand aller Dateien eines Projekts mit Zeitstempel dargestellt in einem langen Wert wie der Commit `e351689decb3570c1cc2f7163cfeec24d2ac5ed3` (erster Commit dieses Projekts)
@@ -53,5 +66,47 @@ Hochladen aller Commits zum Remote-Repo
 
 ```bash
 git push
+```
+
+### Fetch
+
+Herunterladen der Informationen zu Änderungen im Remote-Repo.
+```bash
+git fetch
+```
+
+### Pull
+
+Herunterladen und Anwenden der Änderungen im Remote-Repo.
+```bash
+git pull
+```
+
+### Branch
+
+Erstellen eines neuen Branches:
+```bash
+git branch <branch>
+```
+
+### Checkout
+
+Wechseln zu einem Branch:
+```bash
+git checkout <branch>
+```
+
+### Merge
+
+Zusammenführen von Branches:
+```bash
+git merge <branch>
+```
+
+### Log
+
+Informationen zur Historie des Repos:
+```bash
+git log
 ```
 
