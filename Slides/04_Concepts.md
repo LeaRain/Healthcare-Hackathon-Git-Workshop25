@@ -1,20 +1,21 @@
-# Version Control -- Versionskontrolle
+# Konzepte
 
-## Versionen und Zeitstempel
+## Git-Konzepte
 
-Reproduzierbarkeit eines Statuses -- von Dateien wie Code oder Daten  
+| Konzept      | Erklärung                                                                 |
+| ------------ | ------------------------------------------------------------------------- |
+| Repo(sitory) | Projekt mit Quellcode                                                     |
+| Commit       | Spezifischer Stand eines Projekts                                         |
+| Branch       | Separater Teil eines Projekts (häufig für einzelne Features, Issues, ...) |
+| Tag/Label    | Spezifischer Commit mit Annotation                                        |
+| Merge        | Zusammenführen von zwei verschiedenen Ständen                             |
 
-slides.pdf vs. slidesfinal.pdf vs. slidesreallyfinal.pdf ... -> keine passende Versionskontrolle, lediglich Stand einer Datei mit final, reallyfinal, .. nicht eindeutig
+## GitHub-Konzepte
 
-## Teamarbeit
-
-Jedes Teammitglied kann Commits erzeugen durch eigene Änderungen von Dateien und Hinzufügen mit
-
-```bash
-git add <filename>
-git commit -m "<commit message>"
-git push
-```
+| Konzept      | Erklärung                                                     |
+| ------------ | ------------------------------------------------------------- |
+| Issue        | Offener Punkt im Projekt (Fehler/Bug aber auch neue Features) |
+| Pull Request | Vorschlag zum Zusammenführen von zwei Branches                |
 
 ## Arbeit mit Git als Versionskontrolle
 
@@ -48,7 +49,6 @@ Geht auf für einzelne Files:
 ```bash
 git diff <file>
 ```
-
 
 ### Commit
 
@@ -101,6 +101,13 @@ git checkout <branch>
 Zusammenführen von Branches:
 ```bash
 git merge <branch>
+```
+
+### Config
+
+Einstellen der Konfiguration von Git.
+```bash
+git config
 ```
 
 ### Log
