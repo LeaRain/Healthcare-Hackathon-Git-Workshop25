@@ -17,17 +17,13 @@
 | Issue        | Offener Punkt im Projekt (Fehler/Bug aber auch neue Features) |
 | Pull Request | Vorschlag zum Zusammenführen von zwei Branches                |
 
-## Arbeit mit Git als Versionskontrolle
+## Basis Kommandos von Git
 
-### Clone
+### Status
 
-Kopieren eines Repos mit ...
-- allen Daten
-- allen Branches
-- der gesamten Historie
-
+Aktuelle Status der Änderung an Dateien im Repo anzeigen.
 ```bash
-git clone <repo>
+git status
 ```
 
 ### Add
@@ -40,12 +36,12 @@ git add <file>
 
 ### Diff
 
-Differezen zwischen dem aktuellen Stand des lokalen Repos und dem eingecheckten Stand anzeigen.
+Differenzen zwischen dem aktuellen Stand des lokalen Repos und dem eingecheckten Stand anzeigen.
 ```bash
 git diff
 ```
 
-Geht auf für einzelne Files:
+Geht auch für einzelne Files:
 ```bash
 git diff <file>
 ```
@@ -59,6 +55,19 @@ git commit -m "<message>"
 ```
 
 Am besten mit der Option `-m` gleich ein Commit-Message setzen.
+
+### Server Kommandos von Git
+
+### Clone
+
+Kopieren eines Repos mit ...
+- allen Daten
+- allen Branches
+- der gesamten Historie
+
+```bash
+git clone <repo>
+```
 
 ### Push
 
@@ -82,6 +91,20 @@ Herunterladen und Anwenden der Änderungen im Remote-Repo.
 git pull
 ```
 
+## Speziellere Kommandos
+
+### Reset
+
+De-stagen der Änderungen an einem File.
+```bash
+git reset <file>
+```
+
+Zurücksetzen **aller Änderungen** an einem File auch möglich, **Dateiverlust möglich!**
+```bash
+git reset --hard <file>
+```
+
 ### Branch
 
 Erstellen eines neuen Branches:
@@ -89,11 +112,11 @@ Erstellen eines neuen Branches:
 git branch <branch>
 ```
 
-### Checkout
+### Switch
 
 Wechseln zu einem Branch:
 ```bash
-git checkout <branch>
+git switch <branch>
 ```
 
 ### Merge
